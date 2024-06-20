@@ -13,6 +13,15 @@ pipeline {
             }
         }
 
+        stage('Build Frontend') {
+            steps {
+                script {
+                    sh 'pnpm install'
+                    sh 'pnpm run docs:build'
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
