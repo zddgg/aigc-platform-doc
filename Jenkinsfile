@@ -1,52 +1,68 @@
 pipeline {
-  agent any
+  agent {
+    kubernetes {
+      inheritFrom 'nodejs base'
+      containerTemplate {
+        name 'nodejs'
+        image 'node:20.14.0'
+      }
+
+    }
+
+  }
   stages {
-    stage('Checkout') {
+    stage('Clone repository') {
+      agent none
       steps {
         checkout scm
       }
     }
 
-    stage('Build Frontend') {
+    stage('Run npm install pnpm') {
       steps {
-        script {
+        container('nodejs') {
+          sh 'npm install -g pnpm'
+        }
+
+      }
+    }
+
+    stage('Run pnpm install') {
+      steps {
+        container('nodejs') {
           sh 'pnpm install'
+        }
+
+      }
+    }
+
+    stage('Run test') {
+      steps {
+        container('nodejs') {
+          // sh 'pnpm run test'
+          echo 'no test'
+        }
+
+      }
+    }
+
+    stage('Run build') {
+      steps {
+        container('nodejs') {
           sh 'pnpm run docs:build'
         }
 
       }
     }
 
-    stage('Build Docker Image') {
+    stage('Archive artifacts') {
       steps {
-        script {
-          dockerImage = docker.build("${env.IMAGE_NAME}:${env.IMAGE_TAG}")
+        container('base') {
+          sh 'zip -r dist.zip .vitepress/dist/'
         }
 
+        archiveArtifacts(artifacts: 'dist.zip', followSymlinks: false)
       }
-    }
-
-    stage('Run Docker Container') {
-      steps {
-        script {
-          sh """
-          docker stop frontend-container || true
-          docker rm frontend-container || true
-          docker run -d --name ${env.IMAGE_NAME} -p 80:80 ${env.IMAGE_NAME}:${env.IMAGE_TAG}
-          """
-        }
-
-      }
-    }
-
-  }
-  environment {
-    IMAGE_NAME = 'aigc-platform-doc'
-    IMAGE_TAG = 'latest'
-  }
-  post {
-    always {
-      cleanWs()
     }
 
   }
