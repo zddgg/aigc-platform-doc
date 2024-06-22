@@ -1,69 +1,71 @@
 pipeline {
-  agent {
-    kubernetes {
-      inheritFrom 'nodejs base'
-      containerTemplate {
-        name 'nodejs'
-        image 'node:20.14.0'
-      }
+    agent any
 
+    environment {
+        IMAGE_NAME = "aigc-platform-doc"
+        IMAGE_TAG = "1.0.0"
+        CONTAINER_NAME = "aigc-platform-doc"
     }
 
-  }
-  stages {
-    stage('Clone repository') {
-      agent none
-      steps {
-        checkout scm
-      }
+    tools {
+        nodejs "nodejs-20.15.0"
     }
 
-    stage('Run npm install pnpm') {
-      steps {
-        container('nodejs') {
-          sh 'npm install -g pnpm'
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    sh 'npm install -g pnpm'
+                    sh 'pnpm install'
+                }
+            }
         }
 
-      }
-    }
-
-    stage('Run pnpm install') {
-      steps {
-        container('nodejs') {
-          sh 'pnpm install'
+        stage('Build Docs') {
+            steps {
+                script {
+                    sh 'pnpm run docs:build'
+                }
+            }
         }
 
-      }
-    }
-
-    stage('Run test') {
-      steps {
-        container('nodejs') {
-          // sh 'pnpm run test'
-          echo 'no test'
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build . -t ${IMAGE_NAME}:${IMAGE_TAG}"
+                }
+            }
         }
 
-      }
-    }
-
-    stage('Run build') {
-      steps {
-        container('nodejs') {
-          sh 'pnpm run docs:build'
+        stage('Stop and Remove Previous Container') {
+            steps {
+                script {
+                    sh """
+                    if [ \$(docker ps -q -f name=${CONTAINER_NAME}) ]; then
+                        docker stop ${CONTAINER_NAME}
+                    fi
+                    if [ \$(docker ps -aq -f status=exited -f name=${CONTAINER_NAME}) ]; then
+                        docker rm ${CONTAINER_NAME}
+                    fi
+                    """
+                }
+            }
         }
 
-      }
-    }
-
-    stage('Archive artifacts') {
-      steps {
-        container('base') {
-          sh 'zip -r dist.zip .vitepress/dist/'
+        stage('Run New Container') {
+            steps {
+                script {
+                    sh """
+                    docker run -d --name ${CONTAINER_NAME} -p 80:80 ${IMAGE_NAME}:${IMAGE_TAG}
+                    """
+                }
+            }
         }
-
-        archiveArtifacts(artifacts: 'dist.zip', followSymlinks: false)
-      }
     }
 
-  }
+    post {
+        always {
+            echo 'Deployment finished'
+        }
+    }
 }
