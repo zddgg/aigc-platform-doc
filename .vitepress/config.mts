@@ -30,7 +30,7 @@ export default defineConfig({
       {
         text: '音频大模型集成',
         items: [
-          { text: '编译环境准备', link: '/docs/audio-model-integrated/c++-prepare-env-prepare' },
+          { text: '编译环境准备', link: '/docs/audio-model-integrated/c++-env-prepare' },
           { text: 'GPT-SoVITS', link: '/docs/audio-model-integrated/gpt-sovits' },
           { text: 'Fish-Speech', link: '/docs/audio-model-integrated/fish-speech' },
           { text: 'ChatTTS', link: '/docs/audio-model-integrated/chat-tts' },
