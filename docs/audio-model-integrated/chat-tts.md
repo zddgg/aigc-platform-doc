@@ -23,6 +23,7 @@
 import argparse
 import base64
 import io
+import wave
 
 import numpy as np
 import torch
@@ -30,7 +31,6 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-from pydub import AudioSegment
 
 import ChatTTS
 
@@ -75,40 +75,37 @@ def generate_audio(request: TTSRequest):
             params_infer_code=params_infer_code
         )
 
-    wavs = chat.infer(
+    wav = chat.infer(
         text,
         skip_refine_text=True,
         params_refine_text=params_refine_text,
         params_infer_code=params_infer_code
     )
 
-    audio_data = wavs[0][0]
-    audio_data = audio_data / np.max(np.abs(audio_data))
-    audio_data = (audio_data * 32768).astype(np.int16)
+    audio_data = np.array(wav[0]).flatten()
+    sample_rate = 24000
     text_data = text[0] if isinstance(text, list) else text
 
-    return [audio_data, text_data]
+    audio_data = (audio_data * 32767).astype(np.int16)
+
+    return sample_rate, audio_data, text_data
 
 
 @app.post("/tts")
 async def tts(request: TTSRequest):
-    print(request)
+    sample_rate, audio_data, text_data = generate_audio(request)
 
-    audio_data, text_data = generate_audio(request)
-    audio_segment = AudioSegment(
-        audio_data.tobytes(),
-        frame_rate=24000,
-        sample_width=2,
-        channels=1
-    )
-
-    wav_io = io.BytesIO()
-    audio_segment.export(wav_io, format="wav")
-    wav_io.seek(0)
+    wav_buf = io.BytesIO()
+    with wave.open(wav_buf, "wb") as wf:
+        wf.setnchannels(1)
+        wf.setsampwidth(2)
+        wf.setframerate(sample_rate)
+        wf.writeframes(audio_data.astype(np.int16).tobytes())
+    wav_buf.seek(0)
 
     encoded_text_data = base64.b64encode(text_data.encode('utf-8')).decode('utf-8')
     headers = {'X-Text-Data': encoded_text_data}
-    return StreamingResponse(wav_io, media_type="audio/wav", headers=headers)
+    return StreamingResponse(wav_buf, media_type="audio/mp3", headers=headers)
 
 
 if __name__ == "__main__":
