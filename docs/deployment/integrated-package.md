@@ -18,13 +18,13 @@ resources
 
 maven打包
 ```shell
-mvn clean package
+mvn clean package -DskipTests -Pintegrated,windows
 ```
 
 打包后的文件在`target\aigc-platform-server-x.x.x.jar`
 
 jar启动
 ```shell
-java --enable-preview -jar aigc-platform-server-1.0.0.jar -Dspring.config.location=application.yaml -Dspring.profiles.active=integrated
+java --enable-preview -jar aigc-platform-server-1.0.0.jar -Dspring.profiles.active=integrated,sqlite
 ```
 !!! `-Dspring.profiles.active=integrated`
