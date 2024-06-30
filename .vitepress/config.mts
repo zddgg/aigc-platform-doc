@@ -22,15 +22,22 @@ export default defineConfig({
         ]
       },
       {
+        text: '文本',
+        items: [
+          { text: '模块介绍', link: '/docs/text/describe' },
+        ]
+      },
+      {
         text: '文本大模型集成',
         items: [
-          { text: 'OpenAI', link: '/docs/text-model-integrated/open-ai' },
+          { text: '模块介绍', link: '/docs/text-model-integrated/describe' },
         ]
       },
       {
         text: '音频大模型集成',
         items: [
-          { text: '编译环境准备', link: '/docs/audio-model-integrated/c++-env-prepare' },
+          { text: '模块介绍', link: '/docs/audio-model-integrated/describe' },
+          { text: '编译环境准备', link: '/docs/audio-model-integrated/prepare' },
           { text: 'GPT-SoVITS', link: '/docs/audio-model-integrated/gpt-sovits' },
           { text: 'Fish-Speech', link: '/docs/audio-model-integrated/fish-speech' },
           { text: 'ChatTTS', link: '/docs/audio-model-integrated/chat-tts' },
