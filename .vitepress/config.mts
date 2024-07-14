@@ -1,10 +1,10 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig , type DefaultTheme} from 'vitepress'
 import markdownItReplaceLink from 'markdown-it-replace-link'
 
 export default defineConfig({
   lang: "zh",
   title: "AIGC Platform",
-  description: "A VitePress Site",
+  description: "",
 
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
@@ -12,6 +12,8 @@ export default defineConfig({
 
   themeConfig: {
     logo: { src: '/logo-mini.png', width: 24, height: 24 },
+
+    nav: nav(),
 
     sidebar: [
       {
@@ -42,6 +44,8 @@ export default defineConfig({
           { text: 'Fish-Speech', link: '/docs/audio-model-integrated/fish-speech' },
           { text: 'ChatTTS', link: '/docs/audio-model-integrated/chat-tts' },
           { text: 'Edge-TTS', link: '/docs/audio-model-integrated/edge-tts' },
+          { text: '添加自定义模型', link: '/docs/audio-model-integrated/add-custom-model' },
+          { text: '添加参考音频', link: '/docs/audio-model-integrated/add-ref-audio' },
         ]
       },
       {
@@ -95,3 +99,17 @@ export default defineConfig({
     }
   }
 })
+
+function nav(): DefaultTheme.NavItem[] {
+  return [
+    {
+      text: '2.4.1',
+      items: [
+        {
+          text: '更新日志',
+          link: 'https://github.com/zddgg/aigc-platform-server/blob/main/CHANGELOG.md'
+        },
+      ]
+    }
+  ]
+}
