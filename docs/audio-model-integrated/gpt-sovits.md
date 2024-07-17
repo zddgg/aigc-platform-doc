@@ -4,6 +4,10 @@
 - 代码分支：`fast_inference_`
 - 启动文件：`api_v2.py`(未修改)
 
+## 环境准备
+
+[编译环境准备](/docs/audio-model-integrated/prepare)
+
 ## 操作步骤
 
 下载[w-gpt-sovits-启动脚本下载更新.bat](https://files.wenliang.space/gpt-sovits/w-gpt-sovits-启动脚本下载更新.bat)
