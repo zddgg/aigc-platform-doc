@@ -7,7 +7,7 @@
 ## 安装
 
 ### 下载文件
-下载最新日期文件夹中的`aigc-server.7z`，`model.7z`
+下载最新版本文件夹中的`aigc-server.7z`，`model.7z`
 1. [百度网盘](https://pan.baidu.com/s/1Yo2x8QPlYz7YyzuMqXNGcQ?pwd=wenl)
 2. [夸克网盘](https://pan.quark.cn/s/2a0fa59c238c)
 

@@ -8,6 +8,6 @@
 
 下载`官方Windows整合包v2版`，现在是0807
 
-下载 [w-启动api.bat](https://files.wenliang.space/gpt-sovits/w-启动api.bat) 到文件夹根路径下
+下载 [w-启动api.bat](IMAGE_BASE_URL/gpt-sovits/w-启动api.bat) 到文件夹根路径下
 
 双击启动`w-启动api.bat`
