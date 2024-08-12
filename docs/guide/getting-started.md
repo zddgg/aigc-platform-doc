@@ -1,5 +1,9 @@
 # 快速开始
 
+## 准备
+1. 提供编译后的程序为windows平台，其他平台可使用源码编译启动。
+2. 提供的文本转语音启动包或启动脚本，默认使用nvidia，其他环境需自行修改脚本。
+
 ## 安装
 
 ### 下载文件
@@ -16,7 +20,6 @@
 ```
 aigc-server
 ├─model
-│  ├─fish-speech
 │  ├─gpt-sovits
 │  └─ref-audio
 ├─project

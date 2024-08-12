@@ -27,6 +27,7 @@ export default defineConfig({
         text: '文本',
         items: [
           { text: '模块介绍', link: '/docs/text/describe' },
+          { text: '拼音', link: '/docs/text/pinyin' },
         ]
       },
       {
