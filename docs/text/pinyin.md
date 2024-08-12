@@ -9,7 +9,7 @@
 如需修改一个汉字的读音或者增加删减拼音，下载这个文件重命名为`unihan-pinyin.txt`，放到项目的根路径下（和jar文件同级）。
 
 ## 多音字替换文件
-下载 [pinyin-unihan.txt](https://files.wenliang.space/aigc-platform-doc/pinyin-unihan.txt) 放到项目的根路径下（和jar文件同级）。
+下载 [pinyin-unihan.txt](IMAGE_BASE_URL/aigc-platform-doc/pinyin-unihan.txt) 放到项目的根路径下（和jar文件同级）。
 打开文件找到目标拼音，在后面加上目标文字
 
 示例：项目中想给一下句子注音
