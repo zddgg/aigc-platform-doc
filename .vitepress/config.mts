@@ -27,6 +27,7 @@ export default defineConfig({
         text: '文本',
         items: [
           { text: '模块介绍', link: '/docs/text/describe' },
+          { text: '拼音', link: '/docs/text/pinyin' },
         ]
       },
       {
@@ -103,7 +104,7 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: '2.4.1',
+      text: '2.5.0',
       items: [
         {
           text: '更新日志',
