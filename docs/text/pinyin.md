@@ -8,11 +8,15 @@
 
 如需修改一个汉字的读音或者增加删减拼音，下载这个文件重命名为`unihan-pinyin.txt`，放到项目的根路径下（和jar文件同级）。
 
+::: warning 提示
+已内置原文件，不修改可以不用下载
+:::
+
 ## 多音字替换文件
 下载 [pinyin-unihan.txt](IMAGE_BASE_URL/aigc-platform-doc/pinyin-unihan.txt) 放到项目的根路径下（和jar文件同级）。
 打开文件找到目标拼音，在后面加上目标文字
 
-示例：项目中想给一下句子注音
+示例：项目中想给以下句子注音
 
 人要是<ruby>行<rp>(</rp><rt style="font-size: 0.8em;">xíng</rt><rp>)</rp></ruby>，干一<ruby>行<rp>(</rp><rt style="font-size: 0.8em;">háng</rt><rp>)</rp></ruby><ruby>行<rp>(</rp><rt style="font-size: 0.8em;">xíng</rt><rp>)</rp></ruby>一<ruby>行<rp>(</rp><rt style="font-size: 0.8em;">háng</rt><rp>)</rp></ruby>，一<ruby>行<rp>(</rp><rt style="font-size: 0.8em;">háng</rt><rp>)</rp></ruby><ruby>行<rp>(</rp><rt style="font-size: 0.8em;">xíng</rt><rp>)</rp></ruby><ruby>行<rp>(</rp><rt style="font-size: 0.8em;">háng</rt><rp>)</rp></ruby><ruby>行<rp>(</rp><rt style="font-size: 0.8em;">háng</rt><rp>)</rp></ruby><ruby>行<rp>(</rp><rt style="font-size: 0.8em;">xíng</rt><rp>)</rp></ruby>
 
