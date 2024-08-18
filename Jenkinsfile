@@ -8,7 +8,7 @@ pipeline {
     }
 
     tools {
-        nodejs "nodejs-20.15.0"
+        nodejs "node22"
     }
 
     stages {
