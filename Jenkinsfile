@@ -15,8 +15,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    sh 'npm install -g pnpm'
-                    sh 'pnpm install'
+                    sh 'npm install'
                 }
             }
         }
@@ -24,7 +23,7 @@ pipeline {
         stage('Build Docs') {
             steps {
                 script {
-                    sh 'pnpm run docs:build'
+                    sh 'npm run docs:build'
                 }
             }
         }
