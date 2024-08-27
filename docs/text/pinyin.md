@@ -16,7 +16,7 @@
 :::
 
 ### 多音字替换文件
-下载 [pinyin-unihan.txt](IMAGE_BASE_URL/aigc-platform-doc/pinyin-unihan.txt) 放到项目的根路径下（和jar文件同级）。
+下载 [pinyin-unihan.txt](IMAGE_BASE_URL/files/aigc-platform-doc/pinyin-unihan.txt) 放到项目的根路径下（和jar文件同级）。
 打开文件找到目标拼音，在后面加上目标文字
 
 示例：项目中想给以下句子注音

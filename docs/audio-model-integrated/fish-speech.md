@@ -10,9 +10,9 @@
 
 下载以下文件至解压后的文件夹
 
-1. [步骤1-安装环境.bat](IMAGE_BASE_URL/fish-speech/步骤1-安装环境.bat)
-2. [步骤2-启动API.bat](IMAGE_BASE_URL/fish-speech/步骤2-启动API.bat)
-3. [启动webui.bat](IMAGE_BASE_URL/fish-speech/启动webui.bat)
+1. [步骤1-安装环境.bat](IMAGE_BASE_URL/files/fish-speech/步骤1-安装环境.bat)
+2. [步骤2-启动API.bat](IMAGE_BASE_URL/files/fish-speech/步骤2-启动API.bat)
+3. [启动webui.bat](IMAGE_BASE_URL/files/fish-speech/启动webui.bat)
 
 ## 环境安装
 

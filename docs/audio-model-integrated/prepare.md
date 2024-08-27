@@ -11,7 +11,7 @@ AMD显卡以及Mac需要找其他整合包或者自己通过源码启动。
 
 下载链接 [Visual Studio 社区版](https://visualstudio.microsoft.com/zh-hans/downloads/)
 
-![](IMAGE_BASE_URL/aigc-platform-doc/95b76c1db715444a91fd4dbdea42e97f.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/95b76c1db715444a91fd4dbdea42e97f.png)
 
 ## 安装
 
@@ -35,9 +35,9 @@ AMD显卡以及Mac需要找其他整合包或者自己通过源码启动。
 - 安装后占用空间较大，合理选择安装位置。
 - 点击右下角开始安装。
 
-![](IMAGE_BASE_URL/aigc-platform-doc/fe0b0e3494e2408fa97d43cf4ee51f83.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/fe0b0e3494e2408fa97d43cf4ee51f83.png)
 
 
 在安装过程中这里取消勾选，安装完成后不用启动，直接关掉相关窗口就可以了。
 
-![](IMAGE_BASE_URL/aigc-platform-doc/3ccbc7da44e548de8e690dd22892f566.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/3ccbc7da44e548de8e690dd22892f566.png)
