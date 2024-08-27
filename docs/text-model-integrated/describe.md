@@ -16,14 +16,14 @@
 
 ## 下载模板
 1. 在项目根路径下（和jar文件同级）创建文件夹`config`
-2. 下载 [text-model-server-template.json](IMAGE_BASE_URL/aigc-platform-doc/text-model-server-template.json)
+2. 下载 [text-model-server-template.json](IMAGE_BASE_URL/files/aigc-platform-doc/text-model-server-template.json)
 放到`config`文件夹中。
 
 ## 配置步骤
 1. 项目启动后，左侧菜单栏进入`模型`页面，选择二级菜单`文本大模型`。
 2. 点击`添加文本大模型`
 
-![](IMAGE_BASE_URL/aigc-platform-doc/1280534c6d6b449f8c4284dd7d997e11.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/1280534c6d6b449f8c4284dd7d997e11.png)
 
 3. 选择合适的模板，更改模型（如需调整）。
 

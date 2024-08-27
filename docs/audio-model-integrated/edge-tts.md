@@ -10,10 +10,10 @@
 
 下载以下文件至文件夹中
 
-1. [api.py](IMAGE_BASE_URL/edge-tts/api.py)
-2. [步骤1-安装环境.bat](IMAGE_BASE_URL/edge-tts/步骤1-安装环境.bat)
-3. [步骤2-启动API.bat](IMAGE_BASE_URL/edge-tts/步骤2-启动API.bat)
-4. [requirements.txt](IMAGE_BASE_URL/edge-tts/requirements.txt)
+1. [api.py](IMAGE_BASE_URL/files/edge-tts/api.py)
+2. [步骤1-安装环境.bat](IMAGE_BASE_URL/files/edge-tts/步骤1-安装环境.bat)
+3. [步骤2-启动API.bat](IMAGE_BASE_URL/files/edge-tts/步骤2-启动API.bat)
+4. [requirements.txt](IMAGE_BASE_URL/files/edge-tts/requirements.txt)
 
 ## 环境安装
 

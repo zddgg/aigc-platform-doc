@@ -31,20 +31,20 @@
 2. 下拉框中没有对应的正则时，可求助AI大模型，帮你生成章节名解析的正则表达式，然后填入输入框。
 3. 台词解析规则是识别文本中的对话的重要配置。这里可以全局配置，也可以在对用章节处理时单独配置。
 
-![](IMAGE_BASE_URL/aigc-platform-doc/8feeae95357a4cbdb88ed869013eca7d.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/8feeae95357a4cbdb88ed869013eca7d.png)
 
 ## 台词解析
 1. 点击左侧二级菜单中章节列表进入对应的章节页面，点击`中间上方`的`台词解析`按钮。
 2. 在下拉框中选择对应的解析规则。没有对应的正则时，可求助AI大模型，然后填入输入框。
 3. 点击验证后会在右侧出现对话列表，这部分是后面需要角色推理的内容，其他当作`旁白`处理。
  
-![](IMAGE_BASE_URL/aigc-platform-doc/566d6f943f6b43518a63a01da130fe67.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/566d6f943f6b43518a63a01da130fe67.png)
 
 ## 设置预置角色
 预置角色是项目中的预先配置的角色及模型关系，会根据后面角色后的角色名匹配自动加载预置角色绑定模型配置。
 1. 点击右侧角色操作栏中的`预置角色`，`添加预置角色`
 
-![](IMAGE_BASE_URL/aigc-platform-doc/a521bdfedd954484a02105678ea99609.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/a521bdfedd954484a02105678ea99609.png)
 
 ## 角色推理
 完成上一步的台词解析后，点击`角色推理`按钮，会调用文本大模型角色推理。这一步可关注控制台是否有实时结果输出、有错误时页面的错误提示。
@@ -54,7 +54,7 @@
 
 当角色推理成功后，你的页面会是这样。
 
-![](IMAGE_BASE_URL/aigc-platform-doc/c5f5d5bf7d344fc7810bb47e358fbb2b.png)
+![](IMAGE_BASE_URL/files/aigc-platform-doc/c5f5d5bf7d344fc7810bb47e358fbb2b.png)
 
 ## 模型设置
 1. 点击文中角色栏对应角色展开，点击`选择模型`。
