@@ -4,15 +4,25 @@
 - 代码分支：`main`
 - 启动文件：`tools/api.py`
 
-### 前置准备
+## 前置准备
 
-下载 `https://github.com/fishaudio/fish-speech/archive/refs/heads/main.zip` 压缩包，解压至`全英文路径`下
+1. 编译环境安装
 
-下载以下文件至解压后的文件夹
+   ::: danger 编译环境安装
 
-1. [步骤1-安装环境.bat](IMAGE_BASE_URL/files/fish-speech/步骤1-安装环境.bat)
-2. [步骤2-启动API.bat](IMAGE_BASE_URL/files/fish-speech/步骤2-启动API.bat)
-3. [启动webui.bat](IMAGE_BASE_URL/files/fish-speech/启动webui.bat)
+   根据步骤先安装编译环境。 [编译环境准备](./prepare)。
+
+   :::
+
+2. 下载源代码
+
+   下载 `https://github.com/fishaudio/fish-speech/archive/refs/heads/main.zip` 压缩包，解压至`全英文路径`下。
+
+3. 下载脚本
+
+    1. [步骤1-安装环境.bat](IMAGE_BASE_URL/files/fish-speech/步骤1-安装环境.bat)
+    2. [步骤2-启动API.bat](IMAGE_BASE_URL/files/fish-speech/步骤2-启动API.bat)
+    3. [启动webui.bat](IMAGE_BASE_URL/files/fish-speech/启动webui.bat)
 
 ## 环境安装
 
