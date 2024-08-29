@@ -45,8 +45,8 @@ export default defineConfig({
           { text: 'Fish-Speech', link: '/docs/audio-model-integrated/fish-speech' },
           { text: 'ChatTTS', link: '/docs/audio-model-integrated/chat-tts' },
           { text: 'Edge-TTS', link: '/docs/audio-model-integrated/edge-tts' },
-          { text: '添加自定义模型', link: '/docs/audio-model-integrated/add-custom-model' },
-          { text: '添加参考音频', link: '/docs/audio-model-integrated/add-ref-audio' },
+          { text: '自定义模型', link: '/docs/audio-model-integrated/add-custom-model' },
+          { text: '参考音频', link: '/docs/audio-model-integrated/add-ref-audio' },
         ]
       },
       {
