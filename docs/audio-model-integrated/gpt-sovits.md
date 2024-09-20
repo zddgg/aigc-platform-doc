@@ -6,7 +6,7 @@
 
 ## 操作步骤
 
-下载`官方Windows整合包v2版`，现在是`v2-240821`
+下载[官方Windows整合包](https://www.yuque.com/baicaigongchang1145haoyuangong/ib3g1e/dkxgpiy9zb96hob4#KTvnO)，现在是`v2-240821`
 
 下载 [w-启动api.bat](IMAGE_BASE_URL/files/gpt-sovits/w-启动api.bat) 到文件夹根路径下
 
