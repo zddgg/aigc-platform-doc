@@ -104,7 +104,7 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: '2.6.0',
+      text: '2.6.2',
       items: [
         {
           text: '更新日志',
