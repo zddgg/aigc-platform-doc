@@ -45,6 +45,7 @@ export default defineConfig({
           { text: 'Fish-Speech', link: '/docs/audio-model-integrated/fish-speech' },
           { text: 'ChatTTS', link: '/docs/audio-model-integrated/chat-tts' },
           { text: 'Edge-TTS', link: '/docs/audio-model-integrated/edge-tts' },
+          { text: 'CosyVoice', link: '/docs/audio-model-integrated/cosy-voice' },
           { text: '自定义模型', link: '/docs/audio-model-integrated/add-custom-model' },
           { text: '参考音频', link: '/docs/audio-model-integrated/add-ref-audio' },
         ]
@@ -104,7 +105,7 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     {
-      text: '2.6.2',
+      text: '2.6.4',
       items: [
         {
           text: '更新日志',
